@@ -7,4 +7,15 @@ insert into User (  amountCharged, amountPaid, createdAt, dueDate, email, name, 
 insert into User (  amountCharged, amountPaid, createdAt, dueDate, email, name, nickName, status, updatedAt) values ( 10000, 20000, now(), '2019-07-01 23:59:59', 'salt7@gmail.com', 'salt7', 'salt7', 'ACTIVE', now() );
 insert into User (  amountCharged, amountPaid, createdAt, dueDate, email, name, nickName, status, updatedAt) values ( 10000, 20000, now(), '2019-07-01 23:59:59', 'salt8@gmail.com', 'salt8', 'salt8', 'ACTIVE', now() );
 insert into User (  amountCharged, amountPaid, createdAt, dueDate, email, name, nickName, status, updatedAt) values ( 30000, 20000, now(), '2019-07-01 23:59:59', 'salt9@gmail.com', 'salt9', 'salt9', 'ACTIVE', now() );
-insert into User (  amountCharged, amountPaid, createdAt, dueDate, email, name, nickName, status, updatedAt) values ( 10000, 20000, now(), '2019-07-01 23:59:59', 'salt10@gmail.com', 'salt10', 'salt10', 'INACTIVE', now() );
+insert into User (  amountCharged, amountPaid, createdAt, dueDate, email, name, nickName, status, updatedAt) values ( 40000, 20000, now(), '2019-07-01 23:59:59', 'salt10@gmail.com', 'salt10', 'salt10', 'INACTIVE', now() );
+
+insert into dairy (name, category, amount, createdAt, updatedAt, deleteAt, status) values('서울우유1', '우유', 10000, now() - interval 3 month , now(), now() - interval 2 month, 'FRESH' );
+insert into dairy (name, category, amount, createdAt, updatedAt, deleteAt, status) values('서울우유2', '우유', 20000, now() - interval 3 month , now(), now() - interval 2 month, 'FRESH' );
+insert into dairy (name, category, amount, createdAt, updatedAt, deleteAt, status) values('서울우유3', '우유', 10000, now() - interval 3 month , now(), now() - interval 2 month, 'FRESH' );
+insert into dairy (name, category, amount, createdAt, updatedAt, deleteAt, status) values('서울우유4', '우유', 20000, now() - interval 3 month , now(), now() - interval 2 month, 'FRESH' );
+insert into dairy (name, category, amount, createdAt, updatedAt, deleteAt, status) values('서울우유5', '우유', 10000, now() - interval 3 month , now(), now() - interval 2 month, 'FRESH' );
+insert into dairy (name, category, amount, createdAt, updatedAt, deleteAt, status) values('서울우유6', '우유', 20000, now() - interval 1 month , now(), now() + interval 2 month, 'FRESH' );
+insert into dairy (name, category, amount, createdAt, updatedAt, deleteAt, status) values('서울우유7', '우유', 10000, now() - interval 1 month , now(), now() + interval 2 month, 'FRESH' );
+insert into dairy (name, category, amount, createdAt, updatedAt, deleteAt, status) values('서울우유8', '우유', 20000, now() - interval 1 month , now(), now() + interval 2 month, 'FRESH' );
+insert into dairy (name, category, amount, createdAt, updatedAt, deleteAt, status) values('서울우유9', '우유', 10000, now() - interval 1 month , now(), now() + interval 2 month, 'FRESH' );
+insert into dairy (name, category, amount, createdAt, updatedAt, deleteAt, status) values('서울우유0', '우유', 20000, now() - interval 1 month , now(), now() + interval 2 month, 'FRESH' );
