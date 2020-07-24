@@ -1,12 +1,23 @@
 server:
   port: 80
 ---
+
 spring:
-  profiles:dev
+  profiles: dev
+
 server:
-  port: 81
+  port: 8081
 ---
+
 spring:
-  profile:stg
+  profiles: stg
+
 server:
-  port: 82
+  port: 8082
+---
+
+spring:
+  profiles: batch
+
+server:
+  port: 8000

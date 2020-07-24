@@ -20,3 +20,4 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5Dialect
 server:
   port: 80
+# profiles로 포트 컨트롤 하는게 좋은거같음.

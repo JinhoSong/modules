@@ -23,27 +23,23 @@ import java.util.List;
 @AllArgsConstructor  // 생성자 DI를 위한 lombok Annotation
 @Configuration
 public class unPaidUserConfig {
-    private UserRepository userRepository;
+
+    private final UserRepository userRepository;
 
     @Bean
-    public Job unPaidUserJob(
-            JobBuilderFactory jobBuilderFactory,
-            Step unPaidUserJobStep
-    ) {
+    public Job unPaidUserJob(JobBuilderFactory jobBuilderFactory, Step unPaidUserJobStep) {
         log.info("********** This is unPaidUserJob");
         return jobBuilderFactory.get("unPaidUserJob")
-                //.preventRestart() //중복된걸 허용하지 않는다.
+                .preventRestart() //중복된걸 허용하지 않는다.
                 .start(unPaidUserJobStep)
                 .build();
     }
 
     @Bean
-    public Step unPaidUserJobStep(
-            StepBuilderFactory stepBuilderFactory
-    ) {
+    public Step unPaidUserJobStep(StepBuilderFactory stepBuilderFactory) {
         log.info("********** This is unPaidUserJobStep");
         return stepBuilderFactory.get("unPaidUserJobStep")
-                .<User, User> chunk(10)
+                .<User, User>chunk(10)
                 .reader(unPaidUserReader())
                 .processor(this.unPaidUserProcessor())
                 .writer(this.unPaidUserWriter())
@@ -58,7 +54,7 @@ public class unPaidUserConfig {
         log.info("          - activeUser SIZE : " + activeUsers.size());
         List<User> unPaidUsers = new ArrayList<>();
         for (User user : activeUsers) {
-            if(user.isUnpaid()) {
+            if (user.isUnpaid()) {
                 unPaidUsers.add(user);
             }
         }
